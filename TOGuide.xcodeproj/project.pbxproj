@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832EDE5729A85B940006E32B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 832EDE5629A85B940006E32B /* URLImage */; };
 		83F3901B29A81AD300CA0DE2 /* TOGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3901A29A81AD300CA0DE2 /* TOGuideApp.swift */; };
 		83F3901D29A81AD300CA0DE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3901C29A81AD300CA0DE2 /* ContentView.swift */; };
 		83F3901F29A81AD700CA0DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F3901E29A81AD700CA0DE2 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832EDE5729A85B940006E32B /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +106,9 @@
 			dependencies = (
 			);
 			name = TOGuide;
+			packageProductDependencies = (
+				832EDE5629A85B940006E32B /* URLImage */,
+			);
 			productName = TOGuide;
 			productReference = 83F3901729A81AD300CA0DE2 /* TOGuide.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +137,9 @@
 				Base,
 			);
 			mainGroup = 83F3900E29A81AD200CA0DE2;
+			packageReferences = (
+				832EDE5529A85B940006E32B /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 83F3901829A81AD300CA0DE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		832EDE5529A85B940006E32B /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		832EDE5629A85B940006E32B /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 832EDE5529A85B940006E32B /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83F3900F29A81AD200CA0DE2 /* Project object */;
 }

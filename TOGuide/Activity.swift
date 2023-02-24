@@ -2,7 +2,6 @@
 //  Activity.swift
 //  TOGuide
 //
-//  Created by Mahmoud Mraisi on 23/02/2023.
 //
 
 import Foundation
@@ -11,10 +10,10 @@ class Activity: Identifiable{
     var id = UUID()
     var name: String
     var description :String
-    var rating : Int
+    var rating : Double
     var hostName :String
     var images: [String]
-    var price :Int
+    var price :Double
     
     
     init(){
@@ -26,7 +25,7 @@ class Activity: Identifiable{
         self.price = 0
     }
     
-    init(name: String, description: String, rating: Int, hostName: String, images: [String], price: Int) {
+    init(name: String, description: String, rating: Double, hostName: String, images: [String], price: Double) {
         self.name = name
         self.description = description
         self.rating = rating

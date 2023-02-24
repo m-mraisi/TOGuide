@@ -2,7 +2,6 @@
 //  ContentView.swift
 //  TOGuide
 //
-//  Created by Mahmoud Mraisi on 23/02/2023.
 //
 
 import SwiftUI
@@ -12,29 +11,25 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        TabView {
-            // Feed tab
-            NavigationView {
-                NavigationLink(destination: ActivityListView()) {
+        NavigationView {
+            TabView {
+                // Feed tab
+                ActivityListView().tabItem {
+                    Image(systemName: "house.fill")
                     Text("Feed")
                 }
-            }
-            .tabItem {
-                Image(systemName: "1.circle")
-                Text("Feed")
-            }
-            
-            // Favorite tab
-            NavigationView {
-                NavigationLink(destination: FavoriteView()) {
+                
+                // Favorite tab
+                FavoriteView().tabItem {
+                    Image(systemName: "star.fill")
                     Text("Favorite")
                 }
             }
-            .tabItem {
-                Image(systemName: "2.circle")
-                Text("Favorite")
-            }
+            .navigationTitle("TOGuide")
+            .navigationBarTitleDisplayMode(.inline)
+
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
