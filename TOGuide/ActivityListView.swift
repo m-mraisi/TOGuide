@@ -1,8 +1,6 @@
 //
 //  ActivityListView.swift
 //  TOGuide
-//
-//
 
 import SwiftUI
 import URLImage
@@ -27,11 +25,12 @@ struct ActivityListView: View {
     }
 }
 
-struct customListItemView : View{
+struct customListItemView : View {
+    // the following is the custom list Item
     
     var  activity : Activity
     
-    var body: some View{
+    var body: some View {
         NavigationLink(destination: ActivityDetailView(activity: activity)) {
             HStack {
                 URLImage(URL(string: activity.images[0])!) { image in
