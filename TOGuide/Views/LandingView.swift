@@ -14,8 +14,8 @@ struct LandingView: View {
     @State private var password: String = ""
     @State private var errorMessage = ""
     @State private var showAlert = false
-    let KEY_EMAIL = "email"
-    let KEY_PASSWORD = "password"
+    let KEY_EMAIL = ""
+    let KEY_PASSWORD = ""
     
     
     var body: some View {
