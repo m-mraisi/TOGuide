@@ -7,16 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		161CADDD29AAE27F00193DE0 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CADD729AAE27F00193DE0 /* FavoriteView.swift */; };
-		161CADDE29AAE27F00193DE0 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CADD829AAE27F00193DE0 /* LandingView.swift */; };
-		161CADDF29AAE27F00193DE0 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CADD929AAE27F00193DE0 /* ActivityDetailView.swift */; };
-		161CADE029AAE27F00193DE0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CADDA29AAE27F00193DE0 /* SignInView.swift */; };
-		161CADE129AAE27F00193DE0 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CADDB29AAE27F00193DE0 /* ActivityListView.swift */; };
-		161CADE229AAE27F00193DE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CADDC29AAE27F00193DE0 /* ContentView.swift */; };
-		161CADEB29AAE40300193DE0 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CADEA29AAE40300193DE0 /* Datasource.swift */; };
-		161CADED29AAE42B00193DE0 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161CADEC29AAE42B00193DE0 /* Activity.swift */; };
 		832EDE5729A85B940006E32B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 832EDE5629A85B940006E32B /* URLImage */; };
-		83F3901B29A81AD300CA0DE2 /* TOGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3901A29A81AD300CA0DE2 /* TOGuideApp.swift */; };
 		83F3901F29A81AD700CA0DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F3901E29A81AD700CA0DE2 /* Assets.xcassets */; };
 		83F3902229A81AD700CA0DE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F3902129A81AD700CA0DE2 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -34,8 +25,6 @@
 		83F3901A29A81AD300CA0DE2 /* TOGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOGuideApp.swift; sourceTree = "<group>"; };
 		83F3901E29A81AD700CA0DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83F3902129A81AD700CA0DE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		83F3902829A81BC500CA0DE2 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		83F3902A29A81DB300CA0DE2 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +85,6 @@
 				161CADD629AAE27F00193DE0 /* Views */,
 				83F3901E29A81AD700CA0DE2 /* Assets.xcassets */,
 				83F3902029A81AD700CA0DE2 /* Preview Content */,
-				83F3902829A81BC500CA0DE2 /* Activity.swift */,
-				83F3902A29A81DB300CA0DE2 /* DataSource.swift */,
 			);
 			path = TOGuide;
 			sourceTree = "<group>";
@@ -179,25 +166,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		83F3901329A81AD300CA0DE2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				161CADDF29AAE27F00193DE0 /* ActivityDetailView.swift in Sources */,
-				83F3901B29A81AD300CA0DE2 /* TOGuideApp.swift in Sources */,
-				161CADE129AAE27F00193DE0 /* ActivityListView.swift in Sources */,
-				161CADDD29AAE27F00193DE0 /* FavoriteView.swift in Sources */,
-				161CADE229AAE27F00193DE0 /* ContentView.swift in Sources */,
-				161CADDE29AAE27F00193DE0 /* LandingView.swift in Sources */,
-				161CADED29AAE42B00193DE0 /* Activity.swift in Sources */,
-				161CADEB29AAE40300193DE0 /* Datasource.swift in Sources */,
-				161CADE029AAE27F00193DE0 /* SignInView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		83F3902329A81AD700CA0DE2 /* Debug */ = {
