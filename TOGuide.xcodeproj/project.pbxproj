@@ -34,6 +34,8 @@
 		83F3901A29A81AD300CA0DE2 /* TOGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOGuideApp.swift; sourceTree = "<group>"; };
 		83F3901E29A81AD700CA0DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83F3902129A81AD700CA0DE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		83F3902829A81BC500CA0DE2 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		83F3902A29A81DB300CA0DE2 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,8 @@
 				161CADD629AAE27F00193DE0 /* Views */,
 				83F3901E29A81AD700CA0DE2 /* Assets.xcassets */,
 				83F3902029A81AD700CA0DE2 /* Preview Content */,
+				83F3902829A81BC500CA0DE2 /* Activity.swift */,
+				83F3902A29A81DB300CA0DE2 /* DataSource.swift */,
 			);
 			path = TOGuide;
 			sourceTree = "<group>";
@@ -113,7 +117,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83F3902529A81AD700CA0DE2 /* Build configuration list for PBXNativeTarget "TOGuide" */;
 			buildPhases = (
-				83F3901329A81AD300CA0DE2 /* Sources */,
 				83F3901429A81AD300CA0DE2 /* Frameworks */,
 				83F3901529A81AD300CA0DE2 /* Resources */,
 			);
