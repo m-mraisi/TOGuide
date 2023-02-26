@@ -10,10 +10,6 @@ import SwiftUI
 struct TOGuideApp: App {
     
     var dataSource : DataSource = DataSource()
-    
-    
-    
-    
     var body: some Scene {
         WindowGroup {
             LandingView().environmentObject(dataSource)

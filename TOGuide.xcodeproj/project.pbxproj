@@ -16,6 +16,8 @@
 		16AF445029AAE855000C33F2 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF444E29AAE855000C33F2 /* Datasource.swift */; };
 		16AF445129AAE855000C33F2 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF444F29AAE855000C33F2 /* Activity.swift */; };
 		16AF445329AAE8A3000C33F2 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF445229AAE8A3000C33F2 /* Users.swift */; };
+		16AF445729AB15E6000C33F2 /* tourToronto.png in Resources */ = {isa = PBXBuildFile; fileRef = 16AF445529AB15E6000C33F2 /* tourToronto.png */; };
+		16AF445829AB15E6000C33F2 /* tourTorontoDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 16AF445629AB15E6000C33F2 /* tourTorontoDark.png */; };
 		832EDE5729A85B940006E32B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 832EDE5629A85B940006E32B /* URLImage */; };
 		83F3901B29A81AD300CA0DE2 /* TOGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F3901A29A81AD300CA0DE2 /* TOGuideApp.swift */; };
 		83F3901F29A81AD700CA0DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F3901E29A81AD700CA0DE2 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		16AF444E29AAE855000C33F2 /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
 		16AF444F29AAE855000C33F2 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		16AF445229AAE8A3000C33F2 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		16AF445529AB15E6000C33F2 /* tourToronto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourToronto.png; sourceTree = "<group>"; };
+		16AF445629AB15E6000C33F2 /* tourTorontoDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourTorontoDark.png; sourceTree = "<group>"; };
 		83F3901729A81AD300CA0DE2 /* TOGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F3901A29A81AD300CA0DE2 /* TOGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOGuideApp.swift; sourceTree = "<group>"; };
 		83F3901E29A81AD700CA0DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		16AF445429AB15CF000C33F2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				16AF445529AB15E6000C33F2 /* tourToronto.png */,
+				16AF445629AB15E6000C33F2 /* tourTorontoDark.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		83F3900E29A81AD200CA0DE2 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +105,7 @@
 		83F3901929A81AD300CA0DE2 /* TOGuide */ = {
 			isa = PBXGroup;
 			children = (
+				16AF445429AB15CF000C33F2 /* images */,
 				16AF444D29AAE855000C33F2 /* Models */,
 				16AF444029AAE840000C33F2 /* Views */,
 				83F3901A29A81AD300CA0DE2 /* TOGuideApp.swift */,
@@ -173,8 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AF445729AB15E6000C33F2 /* tourToronto.png in Resources */,
 				83F3902229A81AD700CA0DE2 /* Preview Assets.xcassets in Resources */,
 				83F3901F29A81AD700CA0DE2 /* Assets.xcassets in Resources */,
+				16AF445829AB15E6000C33F2 /* tourTorontoDark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

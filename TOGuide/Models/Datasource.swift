@@ -12,9 +12,10 @@ class DataSource: ObservableObject{
     @Published var favoriteList: [Activity] = [Activity]()
     
     //for first sample user
-    @Published var userDict = ["userName":"testUser","password":"testUser"]
+    var userDict = ["email":"user@gmail.com","password":"testUser"]
+    var loggedInUser = Users()
     //for signup functionality
-    @Published var userList: [Users] = [Users]()
+    var userList: [Users] = [Users]()
     
     func fillActivities(){
         activityList.append(Activity(name: "Toronto's Underground Donut Tour",
