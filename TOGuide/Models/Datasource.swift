@@ -11,7 +11,11 @@ class DataSource: ObservableObject{
     @Published var activityList: [Activity] = [Activity]()
     @Published var favoriteList: [Activity] = [Activity]()
     
-   
+    //for first sample user
+    @Published var userDict = ["userName":"testUser","password":"testUser"]
+    //for signup functionality
+    @Published var userList: [Users] = [Users]()
+    
     func fillActivities(){
         activityList.append(Activity(name: "Toronto's Underground Donut Tour",
                                      description: "Join us on a donut adventure through the most interesting parts of downtown Toronto, Kensington Market and Chinatown! Our tour begins at Cops Doughnuts right in the heart of the Fashion District. You’ll love their hot, fresh and tiny doughnuts as well as their super cute aesthetic. From here, we’ll make our way over to Queen street and our next doughnut shop, Bloomer’s. Along Queen street, you’ll find numerous shops and restaurants that you’ll want to add to your itinerary for later that day or the next time you’re in Toronto. After a quick bit of history around Bloomer’s and the surrounding neighborhood, we’ll sample some delicious donuts made fresh daily and then make our way through Alexandra Park, on our way to Kensington Market. You may or may not know that Kensington Market is one of the prime destinations for visitors to Toronto and we’d make sure to include it on our tour. We have two stops lined up for Kensington Market. We want to tell you what they are, but we also don’t want to ruin the surprise. Just make sure to book your tour before they sell out and we’re sure you’re going to have an amazing time trying all kinds of delicious donuts and enjoying the sites, sounds, and tastes of downtown Toronto and Kensington Market specifically.",
