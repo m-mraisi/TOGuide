@@ -24,20 +24,12 @@ struct LandingView: View {
                 NavigationLink(destination: SignInView().navigationBarBackButtonHidden(true),tag: 1, selection: $linkSelection){}
                 NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true),tag: 2, selection: $linkSelection){}
         
-                if colorScheme == .dark {
-                    Section {
-                        Image("logoDark")
-                       .resizable()
-                       .frame(width: 300, height: 300)
-                       .aspectRatio(contentMode: .fit)
-                    }
-                } else {
-                    Section {
-                        Image("logo")
-                       .resizable()
-                       .frame(width: 300, height: 300)
-                       .aspectRatio(contentMode: .fit)
-                    }
+                Section {
+                    Image(colorScheme == .dark ? "logoDark" : "logo")
+                        .resizable()
+                        .frame(width: 300, height: 300)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(10)
                 }
                 Section{
                     Text("Login").font(.largeTitle)
@@ -85,16 +77,7 @@ struct LandingView: View {
             // check is userdefaults have keys
             if(!self.email.isEmpty || !self.email.isEmpty) {
                 linkSelection = 2
-            }// need to talk about if we have signup functionality
-            
-            
-            
-//            if(!email.isEmpty || !password.isEmpty)){ //  for now I am keeping this false to land on the feed screen directly
-//                linkSelection = 1
-//            }
-//            else{
-//                linkSelection = 2
-//            }
+            }
         })
         
     }

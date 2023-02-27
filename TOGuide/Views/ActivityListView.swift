@@ -12,16 +12,20 @@ struct ActivityListView: View {
     @State private var activityList = [Activity]()
     
     var body: some View {
-        List{
-            ForEach(activityList) { activity in
-                customListItemView(activity: activity)
+        VStack{
+            List{
+                ForEach(activityList) { activity in
+                    customListItemView(activity: activity)
+                }
             }
+            .listStyle(GroupedListStyle())
         }
         .onAppear{
-            self.dataSource.fillActivities()
-            self.activityList = self.dataSource.activityList
+            if activityList.isEmpty {
+                self.dataSource.fillActivities()
+                self.activityList = self.dataSource.activityList
+            }
         }
-        .listStyle(GroupedListStyle())
     }
 }
 

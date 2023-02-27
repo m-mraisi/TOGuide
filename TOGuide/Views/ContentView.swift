@@ -9,6 +9,7 @@ import SwiftUI
 // This view checks if the user is already signin or not and base don that it points the next screen
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationView {
@@ -25,10 +26,13 @@ struct ContentView: View {
                     Text("Favorite")
                 }
             }
-            .navigationTitle("TOGuide")
+            .navigationBarTitle(
+                Text("TOGUIDE")
+            )
             .navigationBarTitleDisplayMode(.inline)
 
         }
+        .accentColor(Color("Internal_Gold"))
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

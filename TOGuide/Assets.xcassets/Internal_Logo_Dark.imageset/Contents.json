@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "tourToronto.png",
+      "filename" : "Internal_Logo_Dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ToGuide_Logo_Light.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
