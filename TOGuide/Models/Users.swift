@@ -8,7 +8,7 @@
 import Foundation
 
 class Users {
-    var favoriteList:[String]
+    var favoriteList:[Activity]
     var userName:String
     var password:String
     

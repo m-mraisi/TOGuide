@@ -10,6 +10,8 @@ struct LandingView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var dataSource: DataSource
     @State private var linkSelection: Int?
+    @State private var rememberMe = false
+    @State private var User:Users = Users()
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var errorMessage = ""
@@ -42,11 +44,17 @@ struct LandingView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }.padding()
                     
+                    Toggle(isOn: $rememberMe) {
+                                Text("Remember me")
+                    }.padding()
                     Button(action: {
                         // Handle login button press
+                        
                         var valid = login()
-                        setData()
                         if valid {
+                            if self.rememberMe{
+                                setData()
+                            }
                             linkSelection = 2
                         } else {
                             showAlert = true
@@ -73,7 +81,9 @@ struct LandingView: View {
             // check if the userDefaults has a signin details, if so, then send the user to the activity list, otherwise to the sign in
             self.email = UserDefaults.standard.string(forKey: KEY_EMAIL) ?? ""
             self.password = UserDefaults.standard.string(forKey: KEY_PASSWORD) ?? ""
-            
+            //when we login we store the user object to datasource
+            self.User = Users(userName: self.email, password: self.password)
+            dataSource.loggedInUser = self.User
             // check is userdefaults have keys
             if(!self.email.isEmpty || !self.email.isEmpty) {
                 linkSelection = 2

@@ -13,8 +13,6 @@ struct ActivityDetailView: View {
     @State private var isFavorite = false
     
     let activity: Activity
-    
-    
     var body: some View {
         VStack {
             Text(activity.name)
@@ -97,6 +95,7 @@ struct ActivityDetailView: View {
                         
                     } else {
                         dataSource.addFavoriteActivity(activity)
+                        print(dataSource.loggedInUser.favoriteList)
                     }
                     isFavorite.toggle()
                 }) {

@@ -17,10 +17,8 @@ class DataSource: ObservableObject{
     
     
     //for first sample user
-    var userDict = ["email":"user@gmail.com","password":"testUser"]
-    var loggedInUser = Users()
-    //for signup functionality
-    var userList: [Users] = [Users]()
+    var userDict = ["email":"User@gmail.com","password":"testUser"]
+    @Published var loggedInUser:Users = Users()
     
     func fillActivities(){
         activityList.append(Activity(name: "Toronto's Underground Donut Tour",
@@ -43,12 +41,14 @@ class DataSource: ObservableObject{
     func removeFavoriteActivity(_ activity: Activity) {
         if let index = favoriteList.firstIndex(where: { $0.name == activity.name }) {
             favoriteList.remove(at: index)
+            loggedInUser.favoriteList.remove(at: index)
         }
     }
     
     func addFavoriteActivity(_ activity: Activity) {
         if favoriteList.firstIndex(where: { $0.name == activity.name }) == nil {
             favoriteList.append(activity)
+            loggedInUser.favoriteList.append(activity)
         }
     }
     

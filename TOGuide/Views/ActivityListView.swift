@@ -13,17 +13,19 @@ struct ActivityListView: View {
     
     var body: some View {
         VStack{
+            Text("Activities")
             List{
                 ForEach(activityList) { activity in
                     customListItemView(activity: activity)
                 }
-            }
-            .listStyle(GroupedListStyle())
+            }.frame(height: 600)
         }
         .onAppear{
             if activityList.isEmpty {
                 self.dataSource.fillActivities()
                 self.activityList = self.dataSource.activityList
+                //Everytime the app is launched we set the User.favoriteList to Userdefaults
+                dataSource.loggedInUser.favoriteList = dataSource.favoriteList
             }
         }
     }

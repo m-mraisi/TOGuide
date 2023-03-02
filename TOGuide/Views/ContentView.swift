@@ -12,28 +12,26 @@ struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        NavigationView {
-            TabView {
-                // Feed tab
-                ActivityListView().tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Feed")
+        VStack{
+            NavigationView {
+                TabView {
+                    ActivityListView().tabItem {
+                        Label("Feed",systemImage: "house.fill")
+                    }
+                    FavoriteView().tabItem {
+                        Label("Feed",systemImage: "star.fill")
+                    }
                 }
                 
-                // Favorite tab
-                FavoriteView().tabItem {
-                    Image(systemName: "star.fill")
-                    Text("Favorite")
-                }
+                .navigationBarTitle(
+                    Text("TOGUIDE")
+                )
+                .navigationBarTitleDisplayMode(.inline)
+                
             }
-            .navigationBarTitle(
-                Text("TOGUIDE")
-            )
-            .navigationBarTitleDisplayMode(.inline)
-
+            .accentColor(Color(UIColor(named:"components") ?? UIColor(Color.yellow)))
+            .navigationViewStyle(StackNavigationViewStyle())
         }
-        .accentColor(Color("Internal_Gold"))
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
