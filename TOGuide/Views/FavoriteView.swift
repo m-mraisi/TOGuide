@@ -23,7 +23,7 @@ struct FavoriteView: View {
                 }else{
                     List{
                         ForEach(self.activityList){favorite in
-                            favoriteItemListView(activity: favorite)
+                            customListItemView(activity: favorite)
                         }
                     }.frame(height: 600)
                 }
@@ -40,39 +40,6 @@ struct FavoriteView: View {
 }
 
 
-struct favoriteItemListView : View {
-    // the following is the custom list Item
-    
-    var  activity : Activity
-    
-    var body: some View {
-        NavigationLink(destination: ActivityDetailView(activity: activity)) {
-            HStack {
-                URLImage(URL(string: activity.images[0])!) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 70, height: 70)
-                        .cornerRadius(10)
-                }
-                VStack(alignment: .leading, spacing: 5) {
-                    Text(activity.name)
-                        .font(.system(size: 14))
-                        .fontWeight(.medium)
-                        .foregroundColor(.primary)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("Price: $\(String(format: "%.2f", activity.price)) / person")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
-                Spacer()
-            }
-            .padding(.vertical, 8)
-            .padding(.horizontal, 5)
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-    }
-}
 
 
 struct FavoriteView_Previews: PreviewProvider {

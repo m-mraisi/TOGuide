@@ -16,8 +16,8 @@ struct LandingView: View {
     @State private var password: String = ""
     @State private var errorMessage = ""
     @State private var showAlert = false
-    let KEY_EMAIL = ""
-    let KEY_PASSWORD = ""
+    let KEY_EMAIL = "email"
+    let KEY_PASSWORD = "password"
     
     
     var body: some View {
@@ -50,7 +50,7 @@ struct LandingView: View {
                     Button(action: {
                         // Handle login button press
                         
-                        var valid = login()
+                        let valid = login()
                         if valid {
                             if self.rememberMe{
                                 setData()
@@ -85,7 +85,7 @@ struct LandingView: View {
             self.User = Users(userName: self.email, password: self.password)
             dataSource.loggedInUser = self.User
             // check is userdefaults have keys
-            if(!self.email.isEmpty || !self.email.isEmpty) {
+            if(!self.email.isEmpty) {
                 linkSelection = 2
             }
         })
