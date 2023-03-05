@@ -15,9 +15,16 @@ struct ActivityDetailView: View {
     let activity: Activity
     var body: some View {
         VStack {
-            Text(activity.name)
-                .font(.title)
+            Text("\(activity.name) By \(activity.hostName)")
+                .font(.system(size: 18))
                 .padding(.top, 20)
+            
+            Text("Price: $\(String(format: "%.2f", activity.price)) / person")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .padding(.top, 10)
+                .padding(.bottom, 5)
+            
             
             HStack(spacing: 10) {
                 URLImage(URL(string: activity.images[0])!) { image in
@@ -95,7 +102,6 @@ struct ActivityDetailView: View {
                         
                     } else {
                         dataSource.addFavoriteActivity(activity)
-                        print(dataSource.loggedInUser.favoriteList)
                     }
                     isFavorite.toggle()
                 }) {

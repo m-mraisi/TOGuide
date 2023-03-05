@@ -32,18 +32,18 @@ struct ContentView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: Button(action: {
                     showingAlert = true
-                    }) {
-                        Image(systemName:"rectangle.portrait.and.arrow.right")
-                    }.background(NavigationLink(destination: LandingView().navigationBarBackButtonHidden(true),isActive: self.$valid){
-                        EmptyView()
-                    })
+                }) {
+                    Image(systemName:"rectangle.portrait.and.arrow.right")
+                }.background(NavigationLink(destination: LandingView().navigationBarBackButtonHidden(true),isActive: self.$valid){
+                    EmptyView()
+                })
                     .alert(isPresented: $showingAlert) {
-                                   Alert(title: Text("LOGOUT"), message: Text("Do you want to logout?"), primaryButton: .default(Text("Yes")) {
-                                       logout()
-                                       valid = true
-                                       
-                                   }, secondaryButton: .cancel())
-                               }
+                        Alert(title: Text("LOGOUT"), message: Text("Do you want to logout?"), primaryButton: .default(Text("Yes")) {
+                            logout()
+                            valid = true
+                            
+                        }, secondaryButton: .cancel())
+                    }
                 )
                 
             }

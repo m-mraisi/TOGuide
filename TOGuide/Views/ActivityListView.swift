@@ -13,7 +13,7 @@ struct ActivityListView: View {
     
     var body: some View {
         VStack{
-            Text("Activities")
+//            Text("Activities")
             List{
                 ForEach(activityList) { activity in
                     customListItemView(activity: activity)
@@ -24,8 +24,6 @@ struct ActivityListView: View {
             if activityList.isEmpty {
                 self.dataSource.fillActivities()
                 self.activityList = self.dataSource.activityList
-                //Everytime the app is launched we set the User.favoriteList to Userdefaults
-                dataSource.loggedInUser.favoriteList = dataSource.favoriteList
             }
         }
     }

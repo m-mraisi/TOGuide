@@ -13,7 +13,7 @@ struct FavoriteView: View {
     @State private var isEmpty = false
     var body: some View {
         VStack{
-            Text("Favorites")
+//            Text("Favorites")
             
             
             VStack{
@@ -29,7 +29,7 @@ struct FavoriteView: View {
                 }
             }
         }.onAppear(perform: {
-            self.activityList = dataSource.loggedInUser.favoriteList
+            self.activityList = dataSource.favoriteList
             if(self.activityList.isEmpty){
                 self.isEmpty = true
             }else{
