@@ -23,8 +23,7 @@ struct LandingView: View {
     var body: some View {
         NavigationView{
             VStack {
-                NavigationLink(destination: SignInView().navigationBarBackButtonHidden(true),tag: 1, selection: $linkSelection){}
-                NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true),tag: 2, selection: $linkSelection){}
+                NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true),tag: 1, selection: $linkSelection){}
         
                 Section {
                     Image(colorScheme == .dark ? "logoDark" : "logo")
@@ -55,7 +54,7 @@ struct LandingView: View {
                             if self.rememberMe{
                                 setData()
                             }
-                            linkSelection = 2
+                            linkSelection = 1
                         } else {
                             showAlert = true
                         }
@@ -86,7 +85,7 @@ struct LandingView: View {
             dataSource.loggedInUser = self.User
             // check is userdefaults have keys
             if(!self.email.isEmpty) {
-                linkSelection = 2
+                linkSelection = 1
             }
         })
         
