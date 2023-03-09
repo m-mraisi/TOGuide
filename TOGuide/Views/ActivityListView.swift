@@ -21,6 +21,7 @@ struct ActivityListView: View {
             }.frame(height: 600)
         }
         .onAppear{
+            self.dataSource.activityList = [Activity]()
             if activityList.isEmpty {
                 self.dataSource.fillActivities()
                 self.activityList = self.dataSource.activityList
